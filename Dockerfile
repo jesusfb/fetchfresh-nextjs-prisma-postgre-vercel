@@ -54,7 +54,7 @@ COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/pnpm-lock.yaml ./pnpm-lock.yaml
 
 # Ensure pnpm is installed in the production image
-RUN npm install -g pnpm
+#RUN npm install -g pnpm
 
 # Use pnpm to run the app
-CMD ["pnpm", "run", "start"]
+CMD ["npm", "run", "start"]
